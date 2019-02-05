@@ -1,0 +1,81 @@
+label {
+  display: block;
+}
+
+.table-display {
+  margin: auto;
+  width: 500px;
+  border: 1px solid;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  th {
+    text-align: left;
+    background-color: rgb(204, 204, 204);
+    border: 1px solid;
+    font-weight: 100;
+    height: 30px;
+  }
+  td {
+    border: 1px solid;
+    height: 35px;
+  }
+  .td_odd {
+    background-color: rgb(236, 236, 236);
+  }
+
+  i {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.for-select {
+  cursor: pointer;
+}
+
+.add-save {
+  background-color: rgb(91, 192, 222);
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.td-delete {
+  text-align: center;
+
+  .delete {
+    background-color: rgb(217, 83, 79);
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.div-details {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  i {
+    position: absolute;
+    margin-left: 145px;
+    margin-top: 2px;
+    cursor: pointer;
+  }
+}
+
+.form-details {
+  margin: auto;
+  input{
+    width: 90%;
+  }
+}
+
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
+
+.mat-sort-header-container {
+  align-items: center;
+}

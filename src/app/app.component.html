@@ -1,0 +1,48 @@
+<table matSort (matSortChange)="sortData($event)" class="table-display">
+  <tr>
+    <th mat-sort-header="thfirstname">First Name</th>
+    <th mat-sort-header="thlastname">Last Name</th>
+    <th>DELETE</th>
+  </tr>
+  <tr *ngFor="let student of sortedData; let odd = odd;" [ngClass]="{td_odd:odd}">
+    <td (click)="selectStudent(student.id)" class="for-select">
+      {{student.firstName}}
+    </td>
+    <td (click)="selectStudent(student.id)" class="for-select">
+      {{student.lastName}}
+    </td>
+    <td class="td-delete">
+      <button style="height: 25px; line-height: 0px;" class="delete" mat-raised-button (click)="delete(student.id)">DELETE</button>
+    </td>
+  </tr>
+</table>
+<div class="div-details">
+  Instructor Details
+  <i (click)="newStudent()" class="material-icons" matTooltip="New Student" matTooltipPosition="above">
+    add
+  </i>
+</div>
+<form #studentForm="ngForm" novalidate>
+    <table class="form-details">
+        <tr>
+          <td>
+              <label>First Name</label>
+              <input placeholder="First name of Student" name="FirstName" [(ngModel)]="student.firstName" />
+          </td>
+          <td>
+              <label>Middle Name</label>
+              <input placeholder="Middle name of Student" name="SecondName" [(ngModel)]="student.secondName" />
+          </td>
+          <td>
+              <label>Last Name</label>
+              <input placeholder="Last name of Student" name="LastName" [(ngModel)]="student.lastName"/>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan='2'>
+              <button class="add-save" mat-raised-button (click)="submit(studentForm)">ADD / SAVE</button>
+          </td>
+        </tr>
+    </table>
+</form>
